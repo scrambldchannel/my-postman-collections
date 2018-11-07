@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "a4a82d7b-87d1-4da6-b2d0-45c5ded2a620",
+		"name": "Turtlecoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Daemon",
+			"item": [
+				{
+					"name": "JSON RPC",
+					"item": [
+						{
+							"name": "getcurrencyid",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\t\"jsonrpc\":\"2.0\",\n\t\t\"method\":\"getcurrencyid\",\n\t\t\"params\":{\n\t\t\t\n\t\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getblockcount",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\t\"jsonrpc\":\"2.0\",\n\t\t\"method\":\"getblockcount\",\n\t\t\"params\":{\n\t\t\t\n\t\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "on_getblockhash",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\t\"jsonrpc\":\"2.0\",\n\t\t\"method\":\"on_getblockhash\",\n\t\t\"params\":[\n\t\t\t{{height}}\n\t\t]\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getlastblockheader",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getlastblockheader\",\n\t\"params\": [\n\t\t{{height}}\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "f_on_transactions_pool_json",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getlastblockheader\",\n\t\"params\": [\n\t\t\"{{hash}}\"\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "f_blocks_list_json",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\t\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"f_blocks_list_json\",\n\t\"params\": {\n\t\t\"height\": {{height}}\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "f_block_json",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"f_block_json\",\n\t\"params\": {\n\t\t\"hash\": \"{{hash}}\"\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getblockheaderbyhash",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getblockheaderbyhash\",\n\t\"params\": {\n\t\t\"hash\" : \"{{hash}}\"\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getblockheaderbyheight",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getblockheaderbyheight\",\n\t\"params\": {\n\t\t\"height\": {{height}}\n\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/json_rpc",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"json_rpc"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "HTTP RPC",
+					"item": [
+						{
+							"name": "getheight",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/getheight",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"getheight"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getinfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/getinfo",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"getinfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gettransactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/gettransactions",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"gettransactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getpeers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/getpeers",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"getpeers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "feeinfo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{protocol}}://{{serverName}}:{{httpPortNumber}}/feeinfo",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{serverName}}"
+									],
+									"port": "{{httpPortNumber}}",
+									"path": [
+										"feeinfo"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
